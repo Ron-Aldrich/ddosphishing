@@ -1,4 +1,5 @@
 import requests
+import time
 
 cookies = {
     'PHPSESSID': 'dlord7l684c2oru18p0kvamdnl',
@@ -33,3 +34,4 @@ for x in range(90000):
     response = requests.post('https://zelo-store.com/F-2/MG/sender1.php', cookies=cookies, headers=headers, data=data)
     print("[!]Status: ", response.status_code)
     print("Attempts: ", x)
+    time.sleep(5)
